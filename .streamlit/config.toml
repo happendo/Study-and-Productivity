@@ -2,9 +2,7 @@
 base = "light"
 
 [server]
-numThreads = 8
 runOnSave = true
-maxCacheSize = 2048
 
 [browser]
 gatherUsageStats = false
