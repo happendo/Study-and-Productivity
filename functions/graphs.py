@@ -62,5 +62,6 @@ def dispersionGraph(data, row, column, hideTitles=False):
     st.pyplot(fig)
     plt.close(fig)
 
+@st.cache_data(persist=True)
 def dispersionMapGraph(data, column):
     st.map(df.getLocator(data[column]))
