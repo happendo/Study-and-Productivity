@@ -64,7 +64,7 @@ def getLocator(data):
         geolocator = Nominatim(user_agent='myapplication')
         location = geolocator.geocode(i)
         coords[0].append(location.latitude); coords[1].append(location.longitude)
-        time.sleep(0.4)
+        time.sleep(1.0)
     locData = pd.DataFrame({"Cidades": data, "latitude": coords[0], "longitude": coords[1], "size": data.count()})
     return locData
 
