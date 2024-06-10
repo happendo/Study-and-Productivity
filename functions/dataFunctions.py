@@ -58,6 +58,7 @@ def getDispersionS(data, labelA="Desvio Médio", labelB="Desvio Padrão", labelC
         { labelA: stc.desvMedio(data), labelB: stc.desvPadrao(data), labelC: stc.variancia(data)})
     return finalData.round(2)
 
+@st.cache_data(persist=True)
 def getLocator(data):
     coords = [[],[]]
     for i in data:
