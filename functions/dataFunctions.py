@@ -62,6 +62,7 @@ def getDispersionS(data, labelA="Desvio Médio", labelB="Desvio Padrão", labelC
 def getLocator(data):
     coords = [[],[]]
     for i in data:
+        # Nominatim está com o uso sendo bloqueado por conta de muitos requests feitos pelo host utilizado para o deploy do Streamlit, é necessário criar outra solução.
         geolocator = Nominatim(user_agent='myapplication')
         location = geolocator.geocode(i, timeout=None)
         coords[0].append(location.latitude); coords[1].append(location.longitude)
